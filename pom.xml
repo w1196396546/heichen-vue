@@ -8,6 +8,8 @@
     <modules>
         <module>heichen-common</module>
         <module>heichen-service</module>
+        <module>heichen-api</module>
+        <module>heichen-gateway</module>
     </modules>
     <name>heichen-vue</name>
     <description>heichen-vue</description>
@@ -32,6 +34,7 @@
         <p6spy.version>3.9.1</p6spy.version>
         <swagger.core.version>2.2.8</swagger.core.version>
         <springdoc.version>1.6.15</springdoc.version>
+        <hutool.version>5.8.15</hutool.version>
     </properties>
     <profiles>
         <profile>
@@ -102,6 +105,15 @@
     </dependencies>
     <dependencyManagement>
         <dependencies>
+            <!-- hutool 的依赖配置-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-annotations</artifactId>
